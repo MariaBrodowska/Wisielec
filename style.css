@@ -1,0 +1,30 @@
+body
+{
+    background-color: black;
+    color: lightgrey;
+    font-size: 28px;
+}
+#pojemnik
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 900px;
+}
+#plansza
+{
+    background-color: pink;
+    margin-top: 50px;
+}
+#szubienica
+{
+    float: left;
+}
+#alfabet
+{
+
+    float: left;
+}
+.litera:click
+{
+    color: rgb(26, 185, 26);
+}
