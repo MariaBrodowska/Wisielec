@@ -43,6 +43,10 @@ litery[31]="Y";
 litery[32]="Z";
 litery[33]="Ż";
 litery[34]="Ź";
+var zaznaczone = new Array(35);
+for (i=0;i<35;i++){
+    zaznaczone[i]=false;
+}
 
 function refresh(){
     document.getElementById("plansza").innerHTML =  odgaduje;
@@ -50,17 +54,27 @@ function refresh(){
 
 function niepoprawna(){
     if(np<9){
-    np++;}
+    np++;
     document.getElementById("szubienica").innerHTML = "<div id=\"szubienica\"><img src=\"img/s" + np + ".jpg\"/></div>";
+    }
+    else{
+        document.getElementById("alfabet").innerHTML = "Przegrana :c<br/><br/>Prawidłowe hasło:<br/>"+haslo+"<br/><br/>Kliknij aby zagrać ponownie<br/><br/><span class='reset' onclick='location.reload()'>JESZCZE RAZ?</span>";
+    }
+}
+
+function czyWygrana(){
+    if (haslo==odgaduje){
+        document.getElementById("alfabet").innerHTML = "Podano prawidłowe hasło!<br/><br/>Kliknij aby zagrać ponownie<br/><br/></br><span class='reset' onclick='location.reload()'>JESZCZE RAZ?</span>";
+    }
 }
 
 function sprawdz(litera){
     var wynik = "";
-    var czy = 0;
+    var czy = false;
     for(i=0; i<haslo.length; i++){
         if(litery[litera]==haslo.charAt(i)){
             wynik = wynik + litery[litera];
-            czy = 1;
+            czy = true;
         }
         else if(odgaduje.charAt(i)!="-") wynik = wynik + odgaduje.charAt(i);
         else {
@@ -72,8 +86,10 @@ function sprawdz(litera){
     if(czy) document.getElementById(litera).innerHTML =  "<div class=\"pLitera\" >" + litery[litera] + "</div>";
     else {
         document.getElementById(litera).innerHTML =  "<div  class=\"npLitera\" >" + litery[litera] + "</div>";
+        document.getElementById(litera).setAttribute("onclick",";");
         niepoprawna();
     }
+    czyWygrana();
 }
 
 function start(){

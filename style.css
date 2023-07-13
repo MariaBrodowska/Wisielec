@@ -3,6 +3,9 @@ body
     background-color: black;
     color: lightgrey;
     font-size: 28px;
+    /* font-family: 'Syne Mono', monospace;
+    font-weight: 500; */
+    font-family: 'Fragment Mono', monospace;
 }
 #pojemnik
 {
@@ -15,7 +18,7 @@ body
     margin-top: 50px;
     margin-bottom: 50px;
     text-align: center;
-    font-size: 50px;
+    font-size: 60px;
     min-height: 60px;
     text-transform: uppercase;
 }
@@ -52,27 +55,49 @@ body
 }
 .npLitera{
     float: left;
-    /* padding: 5px;  
+    padding: 5px;  
     width: 30px;
     height: 30px;
-    margin: 5px; */
+    margin-top: -8px;
+    margin-left: -8px;
     text-align: center;
-    color: red;
-    border: 3px solid red;
+    color: rgb(210, 25, 25);
+    border: 3.5px solid rgb(210, 25, 25);
     border-radius: 15px;
     font-size: 25px;
-    cursor: none;
+    cursor: default;
+    background-color: #330000;
 }
 .pLitera{
     float: left;
     padding: 5px;  
     width: 30px;
     height: 30px;
-    margin: 5px;
+    margin-top: -8px;
+    margin-left: -8px;
     text-align: center;
-    color: rgb(68, 255, 0);
-    border: 3px solid rgb(68, 255, 0);
+    color: rgb(76, 188, 35);
+    border: 3.5px solid rgb(76, 188, 35);
     border-radius: 15px;
     font-size: 25px;
-    cursor: none;
+    cursor: default;
+    background-color: #003300;
+}
+.reset{
+    padding: 5px;  
+    width: 150px;
+    height: 50px;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    border: 3px solid gray;
+    border-radius: 15px;
+    font-size: 40px;
+    cursor: pointer;
+}
+.reset:hover{
+    color: rgb(75, 212, 26);
+    border: 3.5px solid rgb(72, 223, 17);
+    background-color: #003300;
 }
