@@ -1,10 +1,36 @@
-var haslo = "BEZ PRACY NIE MA KOŁACZY";
+var t = new Array(21);
+t[0] = "BEZ PRACY NIE MA KOŁACZY";
+t[1] = "broda mędrcem nie czyni";
+t[2] = "Im dalej w las, tym więcej drzew";
+t[3] = "Nosił wilk razy kilka, ponieśli i wilka";
+t[4] = "Biednemu zawsze wiatr w oczy";
+t[5] = "wilk syty i owca cała";
+t[6] = "Co ma wisieć, nie utonie";
+t[7] = "człowiek strzela, Pan Bóg kule nosi";
+t[8] = "Darowanemu koniowi w zęby się nie zagląda";
+t[9] = "człowiek człowiekowi wilkiem";
+t[10] = "zapomniał wół, jak cielęciem był";
+t[11] = "Co nagle, to po diable";
+t[12] = "czas leczy rany";
+t[13] = "uderz w stół, a nożyce się odezwą";
+t[14] = "Serce nie sługa";
+t[15] = "Na bezrybiu i rak ryba";
+t[16] = "jedna jaskółka wiosny nie czyni";
+t[17] = "Lepszy wróbel w garści niż gołąb na dachu";
+t[18] = "Fortuna kołem się toczy";
+t[19] = "Co z oczu, to z serca";
+t[20] = "przyjaciół trzymaj blisko, a wrogów jeszcze bliżej";
+
+var numer = Math.floor(Math.random()*21);
+var haslo = t[numer];
+haslo = haslo.toUpperCase();
 var odgaduje = "";
 var np = 0;
 for (i=0; i<haslo.length ;i++){
     if (haslo.charAt(i) == " "){
         odgaduje = odgaduje + " ";
     }
+    else if(haslo.charAt(i)==",") odgaduje = odgaduje + ",";
     else odgaduje = odgaduje + "-";
 }
 var litery = new Array(35);
