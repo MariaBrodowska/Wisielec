@@ -2,6 +2,12 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8"/>
+    <script type="text/javascript" src="przyslowia.js"></script>
+    <script type="text/javascript" src="sport.js"></script>
+    <script type="text/javascript" src="filmy.js"></script>
+    <script type="text/javascript" src="ksiazki.js"></script>
+    <script type="text/javascript" src="gry.js"></script>
+    <script type="text/javascript" src="zwierzeta.js"></script>   
     <script type="text/javascript" src="szubienica.js"></script>
     <link rel="stylesheet" href="style.css" type="text/css" />
     <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,12 +20,21 @@
 </head>
 <body>
     <div id="pojemnik">
-        <div id="plansza">
+        <div id="plansza">Wybierz kategorię haseł:
         </div>
         <div id="szubienica">
-            <img src="img/s0.jpg"/>
+            <img src="img/s9.jpg"/>
         </div>
         <div id="alfabet">
+            <div class='reset' style='float:left;' onclick="start('przyslowia')">przysłowia</div>
+            <div class='reset' style='float:left;' onclick="start('sport')">sport</div>
+            <div style="clear: both;"></div>
+            <div class='reset' style='float:left;' onclick="start('filmy')">filmy</div>
+            <div class='reset' style='float:left;' onclick="start('ksiazki')">książki</div>
+            <div style="clear: both;"></div>
+            <div class='reset' style='float:left;' onclick="start('gry')">gry</div>
+            <div class='reset' style='float:left;' onclick="start('zwierzeta')">zwierzęta</div>
+            <div style="clear: both;"></div>
         </div>
         <div style="clear:both"></div>
         
